@@ -51,7 +51,7 @@ export default {
                 this.searchLocation = '';
 
                 try {
-                    const res = await fetch(`http://127.0.0.1:9000/weatherplace?location=${param}`, {
+                    const res = await fetch(`direccion_api`, {
                         method : 'GET',
                         headers : {
                             'Content-Type': 'application/json'
