@@ -7,9 +7,6 @@
             </div>
             <div><button class="btn-close" @click="closeSearch"><i class="fas fa-times"></i></button></div>
         </div>
-        <div class="place-result"><p>london</p> <i></i></div>
-        <div class="place-result"><p>barcelona</p> <i></i></div>
-        <div class="place-result"><p>long beach</p> <i></i></div>
     </div>
 </template>
 
@@ -51,7 +48,7 @@ export default {
                 this.searchLocation = '';
 
                 try {
-                    const res = await fetch(`direccion_api`, {
+                    const res = await fetch(`https://apinweatherjgm.herokuapp.com/weatherplace?location=${param}`, {
                         method : 'GET',
                         headers : {
                             'Content-Type': 'application/json'
